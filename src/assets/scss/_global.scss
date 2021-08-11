@@ -1,0 +1,28 @@
+// Layout
+.row {
+    position: relative;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 1600px) {
+        .row {
+          max-width: 1200px;
+        }
+    }
+}
+
+.col-6 {
+  width: 50%;
+}
+
+// Animation
+@keyframes rotation {
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
