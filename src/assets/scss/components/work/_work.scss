@@ -1,0 +1,17 @@
+.work {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  color: $c-white;
+  background-color: rgba($color: lightblue, $alpha: .9);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .row-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

@@ -11,7 +11,7 @@
 	<circle fill="url(#SVGID_1_)" cx="600" cy="600" r="450"/>
 </g>
 <g id="planetoid">
-	<circle fill="#C5D1BE" cx="600" cy="600" r="400"/>
+	<circle fill="#EBC815" cx="600" cy="600" r="400"/>
 </g>
 <g id="lines" opacity="0.1">
 	<line fill="none" stroke="#DBE8D4" stroke-miterlimit="10" x1="540.667" y1="189" x2="517.833" y2="129.833"/>

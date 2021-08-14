@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navigation></navigation>
     <main class="main-content">
       <router-view></router-view>
     </main>
@@ -7,8 +8,13 @@
 </template>
 
 <script>
+  import navigation from './components/Navigation';
+
   export default {
     name: 'app',
+    components: {
+      navigation,
+    },
   };
 </script>
 
@@ -23,7 +29,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.main-content {
-  text-align: center;
-}
 </style>

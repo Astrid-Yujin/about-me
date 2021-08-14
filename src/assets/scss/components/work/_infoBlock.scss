@@ -1,0 +1,38 @@
+.info-block {
+  $root: &;
+
+  &:nth-last-child(n+2) {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid $c-white;
+  }
+  
+  @include tablet {
+    width: calc(50% - 1rem);
+
+    &:nth-child(n + 3) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__title {
+    @include h4;
+    margin-bottom: 1.5rem;
+  }
+
+  &__item {
+    display: flex;
+    
+    & + #{$root}__item {
+        margin-top: .5rem;
+    }
+  }
+
+  &__item-name {
+    flex: 1;
+    @include h6;
+  }
+
+  &__item-value {
+    flex: 2;
+  }
+}

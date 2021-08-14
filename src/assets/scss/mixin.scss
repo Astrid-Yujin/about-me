@@ -50,3 +50,36 @@
     font-size: $f-size-h3-desktop;
   }
 }
+
+@mixin h4 {
+  font-size: $f-size-h4-mobile;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: .9;
+  
+  @include tablet {
+    font-size: $f-size-h4-desktop;
+  }
+}
+
+@mixin h5 {
+  font-size: $f-size-h5-mobile;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: .9;
+  
+  @include tablet {
+    font-size: $f-size-h5-desktop;
+  }
+}
+
+@mixin h6 {
+  font-size: $f-size-h6-mobile;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: .9;
+  
+  @include tablet {
+    font-size: $f-size-h6-desktop;
+  }
+}

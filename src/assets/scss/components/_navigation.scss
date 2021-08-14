@@ -1,0 +1,41 @@
+#nav {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba($color: $c-black, $alpha: .8);
+  opacity: .5;
+
+  // TODO: reset style
+  ul {
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .nav-items {
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    color: $c-white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 2px solid transparent;
+
+    &:hover,
+    &.is-active {
+      border-color: $c-white;
+    }
+
+    & + .nav-item {
+        margin-left: 1rem;
+    }
+  }
+}
