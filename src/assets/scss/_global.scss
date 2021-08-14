@@ -1,16 +1,20 @@
 // Layout
 .row {
-    position: relative;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
 
-    @media only screen and (min-width: 1600px) {
-        .row {
-          max-width: 1200px;
-        }
-    }
+  @media only screen and (min-width: 1600px) {
+    max-width: 1600px;
+  }
+
+  &.is-fullwidth {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+  }
 }
 
 .col-6 {
@@ -20,9 +24,9 @@
 // Animation
 @keyframes rotation {
   from {
-    transform: rotate(-30deg);
+    transform: rotate(0);
   }
   to {
-    transform: rotate(30deg);
+    transform: rotate(360deg);
   }
 }
