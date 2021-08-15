@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import Poster from './Poster';
+import poster from './Poster';
 
 export default {
   name: 'poster-wall',
   components: {
-    Poster,
+    poster,
   },
   props: {
     title: String,

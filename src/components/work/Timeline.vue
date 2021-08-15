@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import TimelineItem from './TimelineItem';
+import timelineItem from './TimelineItem';
 
 export default {
   name: 'timeline',
   components: {
-    TimelineItem,
+    timelineItem,
   },
   props: {
     title: String,

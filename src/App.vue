@@ -6,16 +6,19 @@
         <router-view></router-view>
       </transition>
     </main>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
   import navigation from './components/Navigation';
+  import appFooter from './components/Footer';
 
   export default {
     name: 'app',
     components: {
       navigation,
+      appFooter,
     },
     metaInfo: {
       meta: [
