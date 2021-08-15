@@ -1,11 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import VueMeta from 'vue-meta';
 import Home from '@/components/Home';
 import Work from '@/components/work/Work';
 import Life from '@/components/life/Life';
 import NotFound from '@/components/NotFound';
 
 Vue.use(Router);
+Vue.use(VueMeta);
 
 export default new Router({
   routes: [

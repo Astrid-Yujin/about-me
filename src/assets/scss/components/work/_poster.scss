@@ -6,14 +6,18 @@
 
   &__content {
     position: relative;
+    width: 8rem;
+    height: 8rem;
     display: flex;
     align-items: center;
     border-radius: 50%;
     opacity: .7;
-
-    width: 10rem;
-    height: 10rem;
     border: 2px solid $c-white;
+
+    @include tablet {
+      width: 10rem;
+      height: 10rem;
+    }
 
     &:hover {
       opacity: 1;

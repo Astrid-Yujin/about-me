@@ -12,6 +12,8 @@
   }
 
   &__content {
-    padding-left: 210px;
+    @include tablet {
+      padding-left: 200px;
+    }
   }
 }

@@ -1,5 +1,22 @@
 <template>
   <div class="work page-content">
+    <div id="background-wrapper">
+      <div class="cloud-container cloud1">
+        <div class="cloud"></div>
+      </div>
+      <div class="cloud-container cloud2">
+        <div class="cloud"></div>
+      </div>
+      <div class="cloud-container cloud3">
+        <div class="cloud"></div>
+      </div>
+      <div class="cloud-container cloud4">
+        <div class="cloud"></div>
+      </div>
+      <div class="cloud-container cloud5">
+        <div class="cloud"></div>
+      </div>
+    </div>
     <div class="row">
       <div class="row-content">
         <resume-block

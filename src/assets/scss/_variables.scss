@@ -1,5 +1,5 @@
 // Breakpoints
-$b-phone: 480px;
+$b-mobile: 480px;
 $b-tablet: 768px; // start desktop view
 $b-desktop: 1280px;
 
@@ -7,6 +7,7 @@ $b-desktop: 1280px;
 $c-white: #FFFFFF;
 $c-black: #000000;
 $c-yellow: #EBC815;
+$c-light-blue: rgba($color: lightblue, $alpha: .9);
 
 $c-primary: $c-yellow;
 

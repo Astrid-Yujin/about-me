@@ -37,7 +37,16 @@ $columnCount: 12;
 }
 
 // Animation
-@keyframes fade-in-from-top {
+@keyframes animateCloud {
+  from {
+    margin-left: -1000px;
+  } 
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes fadeInFromTop {
   from {
     transform: translateY(-100%);
   }
@@ -74,6 +83,7 @@ a {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 li {

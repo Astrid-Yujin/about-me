@@ -5,28 +5,22 @@
   width: 100%;
   height: $d-nav-height;
   z-index: 1;
-  background-color: rgba($color: $c-black, $alpha: .8);
-  opacity: .5;
+  background-color: rgba($color: $c-black, $alpha: .9);
 
   &.is-sticky {
     opacity: 1;
 
     .row {
       position: fixed;
+
+      @include mobile {
+        background-color: $c-black;
+      }
     }
 
     .nav-items {
-      animation: fade-in-from-top 1s;
+      animation: fadeInFromTop 1s;
     }
-  }
-
-  // TODO: reset style
-  ul {
-    margin: 0;
-  }
-
-  li {
-    list-style-type: none;
   }
 
   .nav-items {
