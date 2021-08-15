@@ -23,8 +23,17 @@
   }
 }
 
-.col-6 {
-  width: 50%;
+$columnCount: 12;
+.col {
+  @for $i from 1 to $columnCount {
+    &-#{$i} {
+      width: 100%;
+
+      @include tablet {
+        width: calc(100% / #{($columnCount / $i)});
+      }
+    }
+  }
 }
 
 // Animation

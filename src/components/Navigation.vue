@@ -8,7 +8,7 @@
               :key=index 
               :to='{name: item}'
               custom
-              v-slot="{ href, navigate, isExactActive }"
+              v-slot="{ href, navigate, isActive, isExactActive }"
             >
               <li 
                 class="nav-item" 
