@@ -37,6 +37,18 @@
   }
 }
 
+.change-page-enter-active {
+  transition: all .8s ease;
+}
+.change-page-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.change-page-enter, .change-page-leave-to {
+  transform: translateY(.5rem);
+  opacity: 0;
+}
+
+// Reset 
 a {
   text-decoration: none;
   color: inherit;
@@ -80,9 +92,4 @@ h5,
 h6,
 .h6 {
   @include h6;
-}
-
-.page-content {
-  padding: $d-page-padding-vertical 0;
-  min-height: calc(100vh - #{$d-nav-height} - 2 * #{$d-page-padding-vertical});
 }

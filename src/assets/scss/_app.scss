@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+  
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-content {
+  padding: $d-page-padding-vertical 0;
+  min-height: calc(100vh - #{$d-nav-height} - 2 * #{$d-page-padding-vertical});
+}

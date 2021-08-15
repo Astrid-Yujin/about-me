@@ -2,7 +2,9 @@
   <div id="app">
     <navigation></navigation>
     <main class="main-content">
-      <router-view></router-view>
+      <transition name="change-page">
+        <router-view></router-view>
+      </transition>
     </main>
   </div>
 </template>
@@ -29,10 +31,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.page-work,
-.page-life {
-  .main-content {
-    padding: 5rem 0;
-  }
-}
 </style>
