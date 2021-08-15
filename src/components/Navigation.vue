@@ -1,5 +1,9 @@
 <template>
-  <nav id="nav" class="navigation">
+  <nav 
+    id="nav" 
+    class="navigation"
+    :class="!isVisible ? 'is-sticky': null"
+  >
       <div class="row is-fullwidth">
         <div class="row-content">
           <ul class="nav-items">
@@ -32,7 +36,20 @@ export default {
   data() {
     return {
       navItems: ['Home', 'Work', 'Life'],
+      isVisible: true,
     };
+  },
+  mounted() {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting === false) {
+        console.log(this);
+        this.isVisible = false;
+      } else if (entries[0].isIntersecting === true) {
+        this.isVisible = true;
+      }
+    }, { threshold: [0] });
+
+    observer.observe(this.$el);
   },
 };
 </script>

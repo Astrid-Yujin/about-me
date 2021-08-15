@@ -37,6 +37,15 @@ $columnCount: 12;
 }
 
 // Animation
+@keyframes fade-in-from-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0);

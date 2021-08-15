@@ -1,4 +1,5 @@
 #nav {
+  $root: &;
   position: relative;
   top: 0;
   width: 100%;
@@ -6,6 +7,18 @@
   z-index: 1;
   background-color: rgba($color: $c-black, $alpha: .8);
   opacity: .5;
+
+  &.is-sticky {
+    opacity: 1;
+
+    .row {
+      position: fixed;
+    }
+
+    .nav-items {
+      animation: fade-in-from-top 1s;
+    }
+  }
 
   // TODO: reset style
   ul {
@@ -17,9 +30,11 @@
   }
 
   .nav-items {
+    width: 100%;
     padding: .5rem 1rem;
     display: flex;
     align-items: center;
+    transition: all 10s ease;
   }
 
   .nav-item {
