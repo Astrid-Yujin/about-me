@@ -22,5 +22,10 @@ export default {
       default: 'A happy frontend developer :)',
     },
   },
+  beforeRouteEnter(to, from, next) {
+    next(() => {
+      document.body.className = to.meta.bodyClass;
+    });
+  },
 };
 </script>

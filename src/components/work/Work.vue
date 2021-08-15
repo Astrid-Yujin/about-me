@@ -1,53 +1,61 @@
 <template>
-  <div class="work">
-      <div class="row">
-        <div class="row-content">
-          <resume-block
-            class="about-me"
-            title="About Me"
-          >
-            <info-block
-              title="personal information"
-              :infos="personalInfo"
-            />
-            <info-block
-              title="languages"
-              :infos="languageSkills"
-            />
-            <info-block
-              title="professional Skills"
-              :infos="professionalSkills"
-            />
-          </resume-block>
-          
-          <resume-block
-            title="Timeline"
-          >
-            <timeline 
-              title="Work Experience"
-              :items="workExperience"
-            />
-            <timeline 
-              title="Education"
-              :items="education"
-            />
-          </resume-block>
+  <div class="work page-content">
+    <div class="row">
+      <div class="row-content">
+        <resume-block
+          class="about-me"
+          title="About Me"
+        >
+          <info-block
+            title="personal information"
+            :infos="personalInfo"
+          />
+          <info-block
+            title="languages"
+            :infos="languageSkills"
+          />
+          <info-block
+            title="professional Skills"
+            :infos="professionalSkills"
+          />
+        </resume-block>
+      </div>
+    </div>
 
-          <resume-block
-            title="Projects"
+    <div class="row">
+      <div class="row-content">
+        <resume-block
+          title="Timeline"
+        >
+          <timeline 
+            title="Work Experience"
+            :items="workExperience"
+          />
+          <timeline 
+            title="Education"
+            :items="education"
+          />
+        </resume-block>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row-content">
+        <resume-block
+          title="Projects"
+        >
+          <poster-wall
+            title="2021"
+            :items="projects.filter((project) => project.year == '2021')"
           >
-            <poster-wall
-              title="2021"
-              :items="projects.filter((project) => project.year == '2021')"
-            >
-            </poster-wall>
-            <poster-wall
-              title="2020"
-              :items="projects.filter((project) => project.year == '2020')"
-            >
-            </poster-wall>
-          </resume-block>
-        </div>
+          </poster-wall>
+          <poster-wall
+            title="2020"
+            :items="projects.filter((project) => project.year == '2020')"
+          >
+          </poster-wall>
+        </resume-block>
+      </div>
     </div>
   </div>
 </template>
@@ -169,6 +177,11 @@ export default {
         },
       ],
     };
+  },
+  beforeRouteEnter(to, from, next) {
+    next(() => {
+      document.body.className = to.meta.bodyClass;
+    });
   },
 };
 </script>

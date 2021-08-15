@@ -28,4 +28,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.page-work,
+.page-life {
+  .main-content {
+    padding: 5rem 0;
+  }
+}
 </style>

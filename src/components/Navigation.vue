@@ -4,23 +4,21 @@
         <div class="row-content">
           <ul class="nav-items">
             <router-link
-              class="nav-item"
-              to="/"
-              tag="li"
-              active-class="is-active"
-              exact-active-class="is-current"
-              exact
+              v-for="(item, index) in navItems" 
+              :key=index 
+              :to='{name: item}'
+              custom
+              v-slot="{ href, navigate, isExactActive }"
             >
-              Home
-            </router-link>
-            <router-link 
-              class="nav-item"
-              to="/work"
-              tag="li" 
-              active-class="is-active"
-              exact-active-class="is-current"
-            >
-              Work
+              <li 
+                class="nav-item" 
+                :class="[isExactActive && 'is-active']"
+                :active="isActive" 
+                :href="href" 
+                @click="navigate"
+              >
+                {{ item }}
+              </li>
             </router-link>
           </ul>
         </div>
@@ -31,5 +29,10 @@
 <script>
 export default {
   name: 'navigation',
+  data() {
+    return {
+      navItems: ['Home', 'Work', 'Life'],
+    };
+  },
 };
 </script>

@@ -1,3 +1,4 @@
+// Global
 @import './variables';
 @import './mixin';
 @import './global';
@@ -5,6 +6,8 @@
 // Components
 @import './components/home';
 @import './components/navigation';
+
+// Work page
 @import './components/work/work';
 @import './components/work/resumeBlock';
 @import './components/work/infoBlock';
@@ -12,3 +15,6 @@
 @import './components/work/timelineItem';
 @import './components/work/posterWall';
 @import './components/work/poster';
+
+// Life page
+@import './components/life/life';

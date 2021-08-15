@@ -17,6 +17,10 @@
     padding-right: 0;
     max-width: none;
   }
+
+  & + & {
+    margin-top: 1.5rem;
+  }
 }
 
 .col-6 {
@@ -76,4 +80,9 @@ h5,
 h6,
 .h6 {
   @include h6;
+}
+
+.page-content {
+  padding: $d-page-padding-vertical 0;
+  min-height: calc(100vh - #{$d-nav-height} - 2 * #{$d-page-padding-vertical});
 }

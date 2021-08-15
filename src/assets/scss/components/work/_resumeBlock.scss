@@ -3,10 +3,6 @@
   background: $c-yellow;
   border-radius: 4px;
 
-  & + & {
-    margin-top: 1rem;
-  }
-
   &__title {
     @include h2;
     margin-bottom: 3rem;
