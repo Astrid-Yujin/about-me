@@ -1,29 +1,34 @@
 .info-block {
   $root: &;
+  width: 100%;
 
-  &:nth-last-child(n+2) {
+  &:not(:last-child) {
     padding-bottom: 2rem;
     border-bottom: 2px solid $c-white;
+  }
+
+  & + & {
+    margin-top: 2rem;
   }
   
   @include tablet {
     width: calc(50% - 1rem);
 
-    &:nth-child(n + 3) {
-      margin-top: 2rem;
+    &:nth-child(2) {
+      margin-top: 0;
     }
   }
 
   &__title {
-    @include h4;
-    margin-bottom: 1.5rem;
+    @include h5;
+    margin-bottom: 2rem;
   }
 
   &__item {
     display: flex;
     
     & + #{$root}__item {
-        margin-top: .5rem;
+        margin-top: .75rem;
     }
   }
 
@@ -33,6 +38,11 @@
   }
 
   &__item-value {
-    flex: 2;
+    flex: 1;
+    text-align: right;
+
+    @include desktop {
+      flex: 2;
+    }
   }
 }

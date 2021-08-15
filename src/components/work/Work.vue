@@ -2,22 +2,19 @@
   <div class="work">
       <div class="row">
         <div class="row-content">
-          <h1>work</h1>
           <resume-block
+            class="about-me"
             title="About Me"
           >
             <info-block
-              class="col-6"
               title="personal information"
               :infos="personalInfo"
             />
             <info-block
-              class="col-6"
               title="languages"
               :infos="languageSkills"
             />
             <info-block
-              class="col-6"
               title="professional Skills"
               :infos="professionalSkills"
             />
@@ -30,12 +27,25 @@
               title="Work Experience"
               :items="workExperience"
             />
+            <timeline 
+              title="Education"
+              :items="education"
+            />
           </resume-block>
 
           <resume-block
             title="Projects"
           >
-
+            <poster-wall
+              title="2021"
+              :items="projects.filter((project) => project.year == '2021')"
+            >
+            </poster-wall>
+            <poster-wall
+              title="2020"
+              :items="projects.filter((project) => project.year == '2020')"
+            >
+            </poster-wall>
           </resume-block>
         </div>
     </div>
@@ -46,6 +56,7 @@
 import ResumeBlock from './ResumeBlock';
 import InfoBlock from './InfoBlock';
 import Timeline from './Timeline';
+import PosterWall from './PosterWall';
 
 export default {
   name: 'work',
@@ -53,6 +64,7 @@ export default {
     ResumeBlock,
     InfoBlock,
     Timeline,
+    PosterWall,
   },
   props: {
     headline: {
@@ -88,19 +100,72 @@ export default {
       workExperience: [
         {
           period: '08.2019 - now',
-          position: 'Frontend developer',
-          company: {
+          title: 'Frontend developer',
+          institution: {
             name: 'Y1 Digital AG, Stuttgart',
             url: 'https://www.y1.de/',
           },
         },
         {
           period: '08.2017 - 10.2018',
-          position: 'Work Student',
-          company: {
+          title: 'Work Student',
+          institution: {
             name: 'Robert Bosch GmbH, Lenberg',
             url: 'https://www.bosch.com/',
           },
+        },
+      ],
+      education: [
+        {
+          period: '10.2015 - 11.2018',
+          title: 'Master of Science',
+          institution: {
+            name: 'Universtät Stuttgart, Germany',
+            url: 'https://www.uni-stuttgart.de/de/',
+          },
+        },
+        {
+          period: '09.2011 - 06.2015',
+          title: 'Bachelor of Science',
+          institution: {
+            name: 'Dalian University of Technology, China',
+            url: 'https://en.dlut.edu.cn/',
+          },
+        },
+        {
+          period: '02.2013 - 07.2013',
+          title: 'Exchange study',
+          institution: {
+            name: 'National Yunlin University of Science and Technology, Taiwan',
+            url: 'https://www.cm.yuntech.edu.tw/English/index.php',
+          },
+        },
+      ],
+      projects: [
+        {
+          year: '2021',
+          title: 'Fanatec',
+          link: 'https://fanatec.com/eu-de',
+        },
+        {
+          year: '2021',
+          title: 'Rieker',
+          link: 'https://www.rieker.com/shop/',
+        },
+        {
+          year: '2020',
+          title: 'Labaxetta',
+          link: 'https://www.labaxetta.com/',
+        },
+        {
+          year: '2020',
+          title: 'Maryan Beachwear',
+          link: 'https://www.maryanmehlhorn.com/',
+        },
+        {
+          year: '2020',
+          title: 'Ahlers',
+          link: 'https://www.baldessarini.com/de/',
         },
       ],
     };

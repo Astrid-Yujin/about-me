@@ -1,9 +1,5 @@
 .work {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  padding: 5rem 0;
   color: $c-white;
   background-color: rgba($color: lightblue, $alpha: .9);
   overflow: hidden;
@@ -13,5 +9,11 @@
   .row-content {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .about-me .resume-block__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }

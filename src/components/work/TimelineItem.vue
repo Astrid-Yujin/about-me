@@ -1,27 +1,18 @@
 <template>
-  <section class="info-block">
-    <div class="info-block__title">
-      {{ title }}
+  <li class="timeline-item">
+    <div class="timeline-item__period">{{ item.period }}</div>
+    <div class="timeline-item__title">{{ item.title }}</div>
+    <div class="timeline-item__institution">
+      <a :href="item.institution.url">{{ item.institution.name }}</a>
     </div>
-    <div class="info-block__content">
-      <div 
-        v-for="(value, name, key) in infos" 
-        :key=key 
-        class="info-block__item"
-      >
-        <div class="info-block__item-name">{{ name }}</div>
-        <div class="info-block__item-value" v-html="value"></div>
-      </div>
-    </div>
-  </section>
+  </li>
 </template>
 
 <script>
 export default {
-  name: 'info-block',
+  name: 'timeline-item',
   props: {
-    title: String,
-    infos: Object,
+    item: Object,
   },
 };
 </script>

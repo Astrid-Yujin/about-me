@@ -1,5 +1,5 @@
 .resume-block {
-  padding: 2rem;
+  padding: 3rem;
   background: $c-yellow;
   border-radius: 4px;
 
@@ -8,13 +8,7 @@
   }
 
   &__title {
-    @include h3;
-    margin-bottom: 2rem;
-  }
-
-  &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @include h2;
+    margin-bottom: 3rem;
   }
 }

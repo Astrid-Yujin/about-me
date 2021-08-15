@@ -1,26 +1,26 @@
 <template>
-  <section class="timeline">
-    <div class="timeline__title">
+  <section class="poster-wall">
+    <div class="poster-wall__title">
       {{ title }}
     </div>
-    <ul class="timeline__content">
-      <timeline-item
+    <ul class="poster-wall__content">
+      <poster
         v-for="(item, index) in items" 
         :key=index 
         :item="item"
       >
-      </timeline-item>
+      </poster>
     </ul>
   </section>
 </template>
 
 <script>
-import TimelineItem from './TimelineItem';
+import Poster from './Poster';
 
 export default {
-  name: 'timeline',
+  name: 'poster-wall',
   components: {
-    TimelineItem,
+    Poster,
   },
   props: {
     title: String,

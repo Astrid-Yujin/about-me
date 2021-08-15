@@ -3,7 +3,7 @@
       <div class="row">
         <div class="row-content col-6">
           <h1>{{ headline }}</h1>
-          <h2>{{ subHeadline }}</h2>
+          <div class="h6">{{ subHeadline }}</div>
         </div>
     </div>
   </div>
