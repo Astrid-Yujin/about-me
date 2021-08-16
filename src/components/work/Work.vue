@@ -101,6 +101,7 @@ export default {
       default: 'A happy frontend developer :)',
     },
   },
+  // Backend TODO: replace dummy data
   data() {
     return {
       personalInfo: {

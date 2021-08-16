@@ -28,8 +28,10 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## TODOs:
 
-* life page
-  * message board (form validation)
-  * image gallery (lazyload)
-  * backgroud
+* Life page
+  * Message board (form validation, firebase, ref: https://webmobtuts.com/frontend-development/vuejs-tutorials/building-a-simple-forum-with-vue-js-vuex-and-firebase-part1-authentication/)
+  * Image gallery (lazyload)
+  * Backgroud
+* Icons
+* Boostrap (?)
 * PWA

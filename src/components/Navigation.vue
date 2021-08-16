@@ -42,7 +42,6 @@ export default {
   mounted() {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting === false) {
-        console.log(this);
         this.isVisible = false;
       } else if (entries[0].isIntersecting === true) {
         this.isVisible = true;
