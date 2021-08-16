@@ -5,8 +5,8 @@
     </div>
     <ul class="timeline__content">
       <timeline-item
-        v-for="(item, index) in items" 
-        :key=index 
+        v-for="(item, index) in items"
+        :key=index
         :item="item"
       >
       </timeline-item>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import timelineItem from './TimelineItem';
+import timelineItem from './TimelineItem.vue';
 
 export default {
   name: 'timeline',

@@ -36,6 +36,15 @@ $columnCount: 12;
   }
 }
 
+.col-sm {
+  @for $i from 1 to $columnCount {
+    &-#{$i} {
+      width: calc(100% / #{($columnCount / $i)});
+    }
+  }
+}
+
+
 // Animation
 @keyframes animateCloud {
   from {
@@ -76,6 +85,10 @@ $columnCount: 12;
 }
 
 // Reset 
+* {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: inherit;

@@ -1,37 +1,44 @@
 # about-me
 
-> Hallo, I am Yujin! Nice to meet U :)
-
-## Build Setup
-
-``` bash
-# install dependencies
+## Project setup
+```
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Run your end-to-end tests
+```
+npm run test:e2e
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODOs:
-
 * Life page
   * Message board (form validation, firebase, ref: https://webmobtuts.com/frontend-development/vuejs-tutorials/building-a-simple-forum-with-vue-js-vuex-and-firebase-part1-authentication/)
   * Image gallery (lazyload)
   * Backgroud
-* Icons
+* Icons & Font
 * Boostrap (?)
 * PWA
+* Testing

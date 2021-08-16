@@ -4,9 +4,9 @@
       {{ title }}
     </div>
     <div class="info-block__content">
-      <div 
-        v-for="(value, name, key) in infos" 
-        :key=key 
+      <div
+        v-for="(value, name, key) in infos"
+        :key=key
         class="info-block__item"
       >
         <div class="info-block__item-name">{{ name }}</div>

@@ -13,7 +13,8 @@
     .row {
       position: fixed;
 
-      @include mobile {
+      @media only screen and (max-width: 1400px) {
+        animation: fadeInFromTop .8s;
         background-color: $c-black;
       }
     }

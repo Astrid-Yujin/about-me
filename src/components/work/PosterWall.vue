@@ -5,8 +5,8 @@
     </div>
     <ul class="poster-wall__content">
       <poster
-        v-for="(item, index) in items" 
-        :key=index 
+        v-for="(item, index) in items"
+        :key=index
         :item="item"
       >
       </poster>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import poster from './Poster';
+import poster from './Poster.vue';
 
 export default {
   name: 'poster-wall',

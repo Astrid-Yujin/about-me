@@ -11,20 +11,20 @@
 </template>
 
 <script>
-  import navigation from './components/Navigation';
-  import appFooter from './components/Footer';
+import navigation from './components/Navigation.vue';
+import appFooter from './components/Footer.vue';
 
-  export default {
-    name: 'app',
-    components: {
-      navigation,
-      appFooter,
-    },
-    metaInfo: {
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      ],
-    },
-  };
+export default {
+  name: 'app',
+  components: {
+    navigation,
+    appFooter,
+  },
+  metaInfo: {
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    ],
+  },
+};
 </script>

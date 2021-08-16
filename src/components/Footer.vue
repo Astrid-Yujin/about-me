@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    - &#169 2021 Yujin Wang -
+    <span>- © 2021 Yujin Wang -</span>
   </div>
 </template>
 

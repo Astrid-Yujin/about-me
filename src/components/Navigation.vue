@@ -1,6 +1,6 @@
 <template>
-  <nav 
-    id="nav" 
+  <nav
+    id="nav"
     class="navigation"
     :class="!isVisible ? 'is-sticky': null"
   >
@@ -8,17 +8,17 @@
         <div class="row-content">
           <ul class="nav-items">
             <router-link
-              v-for="(item, index) in navItems" 
-              :key=index 
+              v-for="(item, index) in navItems"
+              :key=index
               :to='{name: item}'
               custom
               v-slot="{ href, navigate, isActive, isExactActive }"
             >
-              <li 
-                class="nav-item" 
+              <li
+                class="nav-item"
                 :class="[isExactActive && 'is-active']"
-                :active="isActive" 
-                :href="href" 
+                :active="isActive"
+                :href="href"
                 @click="navigate"
               >
                 {{ item }}

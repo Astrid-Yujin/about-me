@@ -1,10 +1,10 @@
 <template>
   <li class="poster">
-    <a 
+    <a
       class="poster__content"
       :href="item.link"
     >
-    <div 
+    <div
       class="poster__title"
     >
       {{ item.title }}</div>

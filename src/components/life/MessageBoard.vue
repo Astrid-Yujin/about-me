@@ -6,15 +6,15 @@
     <div class="message-board__content">
       <div class="row">
         <div class="row-content">
-          <comment-form></comment-form>
+          <div class="message-form">Coming soon!</div>
         </div>
       </div>
 
       <div class="row">
         <div class="row-content">
-          <div 
+          <div
             v-for="(value, name, key) in infos"
-            :key=key 
+            :key=key
             class="message-board__item"
           >
             <div class="message-board__author">{{ author }}</div>
@@ -27,12 +27,7 @@
 </template>
 
 <script>
-import commentForm from './CommentForm';
-
 export default {
   name: 'message-board',
-  components: {
-    commentForm,
-  },
 };
 </script>
