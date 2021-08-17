@@ -14,12 +14,22 @@
           </div>
         </div>
     </div>
+    <div class="row">
+        <div class="row-content">
+          <comment-block></comment-block>
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
+import CommentBlock from '../components/life/CommentBlock.vue';
+
 export default {
   name: 'life',
+  components: {
+    CommentBlock,
+  },
   beforeRouteEnter(to, from, next) {
     next(() => {
       document.body.className = to.meta.bodyClass;
