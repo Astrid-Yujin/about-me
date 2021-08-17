@@ -1,7 +1,3 @@
-body {
-  margin: 0;
-}
-  
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9,6 +5,12 @@ body {
 }
 
 .page-content {
-  padding: $d-page-padding-vertical 0;
-  min-height: calc(100vh - #{$d-nav-height} - 2 * #{$d-page-padding-vertical});
+  padding: $d-page-padding-vertical 0 calc(#{$d-page-padding-vertical} + #{$d-footer-height});
+  min-height: calc(100vh - #{$d-nav-height} - #{$d-footer-height});
+}
+
+.page-home {
+  .footer {
+    position: absolute;
+  }
 }

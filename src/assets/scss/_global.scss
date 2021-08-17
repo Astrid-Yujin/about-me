@@ -85,11 +85,8 @@ $columnCount: 12;
 }
 
 // Reset 
-* {
-  box-sizing: border-box;
-}
-
-a {
+a,
+a:hover {
   text-decoration: none;
   color: inherit;
 }

@@ -1,4 +1,10 @@
 .footer {
-  padding-bottom: 2rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
+  background-color: rgba($c-black,.5);
+  color: $c-primary;
   text-align: center;
 }

@@ -15,6 +15,8 @@ $c-primary: $c-yellow;
 $d-content-width-max: 1200px;
 $d-page-padding-vertical: 5rem;
 $d-nav-height: 70px;
+$d-footer-padding: 1rem;
+$d-footer-height: 2 * $d-footer-padding + 1rem * 1.5;
 
 // Fonts
 $f-size-h1-desktop: 2.5rem; // 40px
@@ -38,3 +40,7 @@ $f-size-caption-mobile: .6875rem; // 11px
 $f-ls-small: .005em; // 0.5%
 $f-ls-medium: .01em; // 1%
 $f-ls-large: .05em; // 5%
+
+
+// Override Bootstrap variables
+$primary: $c-yellow;

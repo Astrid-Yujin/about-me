@@ -1,10 +1,15 @@
 import Vue from 'vue';
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 import App from './App.vue';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';
+
 import 'normalize.css';
 import './assets/scss/App.scss';
+
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
 
 Vue.config.productionTip = false;
 

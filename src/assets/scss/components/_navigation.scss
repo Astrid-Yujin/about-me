@@ -6,6 +6,7 @@
   height: $d-nav-height;
   z-index: 1;
   background-color: rgba($color: $c-black, $alpha: .9);
+  line-height: 1;
 
   &.is-sticky {
     opacity: 1;
