@@ -47,10 +47,12 @@
           <timeline
             title="Work Experience"
             :items="workExperience"
+            iconType="laptop"
           />
           <timeline
             title="Education"
             :items="education"
+            iconType="pen"
           />
         </resume-block>
       </div>

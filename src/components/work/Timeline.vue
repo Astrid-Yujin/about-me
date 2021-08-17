@@ -1,6 +1,7 @@
 <template>
   <section class="timeline">
     <div class="timeline__title">
+      <b-icon :icon="iconType" font-scale="1.5"></b-icon>
       {{ title }}
     </div>
     <ul class="timeline__content">
@@ -25,6 +26,10 @@ export default {
   props: {
     title: String,
     items: Array,
+    iconType: {
+      type: String,
+      default: 'laptop',
+    },
   },
 };
 </script>

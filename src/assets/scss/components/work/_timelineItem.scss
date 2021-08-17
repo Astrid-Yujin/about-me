@@ -1,6 +1,31 @@
 .timeline-item {
   position: relative;
 
+  @include tablet {
+    padding-left: 1rem;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: .5rem;
+      left: -3px;
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background: $c-white;;
+    }
+
+    &:last-child::after {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      background: $c-yellow;
+    }
+  }
+
   & + & {
     margin-top: 2rem;
   }

@@ -9,11 +9,29 @@
   &__title {
     @include h5;
     margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+
+    .b-icon {
+      margin-right: .5rem;
+    }
   }
 
   &__content {
+    position: relative;
+
     @include tablet {
-      padding-left: 200px;
+      margin-left: 200px;
+
+      &::before {
+        top: 10px;
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        content: '';
+        position: absolute;
+        background: $c-white;
+      }
     }
   }
 }
