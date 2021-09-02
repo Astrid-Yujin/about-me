@@ -10,7 +10,7 @@
   & + & {
     margin-top: 2rem;
   }
-  
+
   @include tablet {
     width: calc(50% - 1rem);
 
@@ -26,9 +26,9 @@
 
   &__item {
     display: flex;
-    
+
     & + #{$root}__item {
-        margin-top: .75rem;
+      margin-top: 0.75rem;
     }
   }
 

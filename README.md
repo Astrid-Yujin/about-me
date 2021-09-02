@@ -37,8 +37,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * Life page
   * Message board (form validation, firebase, ref: https://webmobtuts.com/frontend-development/vuejs-tutorials/building-a-simple-forum-with-vue-js-vuex-and-firebase-part1-authentication/)
   * Image gallery (lazyload)
-  * Backgroud
-* Icons & Font
-* Boostrap (?)
+  * ~~Backgroud~~ -> unify background css
+* ~~Icons~~ & Font
+* ~~Boostrap~~
 * PWA
 * Testing

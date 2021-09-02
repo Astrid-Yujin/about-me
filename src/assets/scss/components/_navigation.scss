@@ -5,7 +5,7 @@
   width: 100%;
   height: $d-nav-height;
   z-index: 1;
-  background-color: rgba($color: $c-black, $alpha: .9);
+  background-color: rgba($color: $c-black, $alpha: 0.9);
   line-height: 1;
 
   &.is-sticky {
@@ -15,7 +15,7 @@
       position: fixed;
 
       @media only screen and (max-width: 1400px) {
-        animation: fadeInFromTop .8s;
+        animation: fadeInFromTop 0.8s;
         background-color: $c-black;
       }
     }
@@ -27,7 +27,7 @@
 
   .nav-items {
     width: 100%;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
     transition: all 10s ease;
@@ -38,7 +38,7 @@
     font-weight: bold;
     cursor: pointer;
     padding: 1rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border: 2px solid transparent;
 
     &:hover,
@@ -47,7 +47,7 @@
     }
 
     & + .nav-item {
-        margin-left: 1rem;
+      margin-left: 1rem;
     }
   }
 }

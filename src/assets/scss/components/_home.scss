@@ -4,11 +4,11 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba($color: $c-black, $alpha: .9);
+  background-color: rgba($color: $c-black, $alpha: 0.9);
   overflow: hidden;
   display: flex;
   align-items: center;
-    
+
   &::before {
     content: "";
     display: block;
@@ -16,7 +16,7 @@
     height: 200vw;
     width: 200vw;
     right: 0;
-    background-image: url('../svg/starwheel.svg');
+    background-image: url("../svg/starwheel.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;

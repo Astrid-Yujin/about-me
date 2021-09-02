@@ -4,51 +4,51 @@
     @content;
   }
 }
-  
+
 @mixin tablet {
   @media only screen and (min-width: $b-tablet) {
     @content;
   }
 }
-  
+
 @mixin desktop {
   @media only screen and (min-width: $b-desktop) {
     @content;
   }
 }
-  
+
 // Typography
 @mixin h1 {
   font-size: $f-size-h1-mobile;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: $f-ls-medium;
-  
+
   @include tablet {
     font-size: $f-size-h1-desktop;
   }
 }
-  
+
 @mixin h2 {
   font-size: $f-size-h2-mobile;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: $f-ls-medium;
-  
+
   @include tablet {
     font-size: $f-size-h2-desktop;
   }
 }
-  
+
 @mixin h3 {
   font-size: $f-size-h3-mobile;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: $f-ls-medium;
-  
+
   @include tablet {
     font-size: $f-size-h3-desktop;
   }
@@ -58,9 +58,9 @@
   font-size: $f-size-h4-mobile;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: $f-ls-medium;
-  
+
   @include tablet {
     font-size: $f-size-h4-desktop;
   }
@@ -70,9 +70,9 @@
   font-size: $f-size-h5-mobile;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: $f-ls-medium;
-  
+
   @include tablet {
     font-size: $f-size-h5-desktop;
   }
@@ -82,9 +82,9 @@
   font-size: $f-size-h6-mobile;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: $f-ls-medium;
-  
+
   @include tablet {
     font-size: $f-size-h6-desktop;
   }

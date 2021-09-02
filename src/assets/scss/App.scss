@@ -1,26 +1,29 @@
 // Global
-@import './variables';
-@import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-vue/src/index.scss';
+@import "./variables";
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-vue/src/index.scss";
 
-@import './mixin';
-@import './global';
-@import './app';
+@import "./mixin";
+@import "./global";
+@import "./app";
 
 // Components
-@import './components/home';
-@import './components/navigation';
-@import './components/footer';
+@import "./components/home";
+@import "./components/navigation";
+@import "./components/footer";
 
 // Work page
-@import './components/work/work';
-@import './components/work/resumeBlock';
-@import './components/work/infoBlock';
-@import './components/work/timeline';
-@import './components/work/timelineItem';
-@import './components/work/posterWall';
-@import './components/work/poster';
+@import "./components/work/work";
+@import "./components/work/resumeBlock";
+@import "./components/work/infoBlock";
+@import "./components/work/timeline";
+@import "./components/work/timelineItem";
+@import "./components/work/posterWall";
+@import "./components/work/poster";
 
 // Life page
-@import './components/life/life';
-@import './components/life/commentBlock';
+@import "./components/life/life";
+@import "./components/life/commentBlock";
+
+// Background
+@import "./components/background/nature";

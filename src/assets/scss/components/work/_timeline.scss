@@ -13,7 +13,7 @@
     align-items: center;
 
     .b-icon {
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 
@@ -28,7 +28,7 @@
         left: 0;
         bottom: 0;
         width: 2px;
-        content: '';
+        content: "";
         position: absolute;
         background: $c-white;
       }
