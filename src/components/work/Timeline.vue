@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import timelineItem from './TimelineItem.vue';
+import TimelineItem from './TimelineItem.vue';
 
 export default {
   name: 'timeline',
   components: {
-    timelineItem,
+    TimelineItem,
   },
   props: {
     title: String,

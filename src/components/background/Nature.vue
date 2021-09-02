@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable max-len -->
-  <div class="nature">
+  <div class="background-nature">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.23 176.82">
       <defs>
       </defs>
@@ -111,6 +111,6 @@
 
 <script>
 export default {
-  name: 'nature-with-animation',
+  name: 'BackgroundNature',
 };
 </script>

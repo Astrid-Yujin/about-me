@@ -28,6 +28,6 @@
 
 <script>
 export default {
-  name: 'message-board',
+  name: 'MessageBoard',
 };
 </script>

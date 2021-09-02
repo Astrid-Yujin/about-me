@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'home',
+  name: 'Home',
   props: {
     headline: {
       type: String,

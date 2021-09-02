@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'navigation',
+  name: 'Navigation',
   data() {
     return {
       navItems: ['Home', 'Work', 'Life'],

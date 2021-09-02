@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'resume-block',
+  name: 'ResumeBlock',
   props: {
     title: String,
   },

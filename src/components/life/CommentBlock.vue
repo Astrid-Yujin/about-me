@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: 'comment-block',
+  name: 'CommentBlock',
   data() {
     return {
       isEditing: false,

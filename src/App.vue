@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import navigation from './components/Navigation.vue';
-import appFooter from './components/Footer.vue';
+import Navigation from './components/Navigation.vue';
+import AppFooter from './components/Footer.vue';
 
 export default {
   name: 'app',
   components: {
-    navigation,
-    appFooter,
+    Navigation,
+    AppFooter,
   },
   metaInfo: {
     meta: [

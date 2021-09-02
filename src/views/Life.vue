@@ -28,7 +28,7 @@ import CommentBlock from '../components/life/CommentBlock.vue';
 import Nature from '../components/background/Nature.vue';
 
 export default {
-  name: 'life',
+  name: 'Life',
   components: {
     CommentBlock,
     Nature,

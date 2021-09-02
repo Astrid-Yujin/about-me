@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'poster',
+  name: 'Poster',
   props: {
     item: Object,
   },

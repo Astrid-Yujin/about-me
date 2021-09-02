@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'timeline-item',
+  name: 'TimelineItem',
   props: {
     item: Object,
   },

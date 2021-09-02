@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import home from './Home.vue';
+import Home from './Home.vue';
 
 export default {
-  name: 'not-found',
+  name: 'NotFound',
   components: {
-    home,
+    Home,
   },
   beforeRouteEnter(to, from, next) {
     // called before the route that renders this component is confirmed.

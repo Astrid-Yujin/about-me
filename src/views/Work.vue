@@ -34,6 +34,7 @@
           <info-block
             title="professional Skills"
             :infos="professionalSkills"
+            progressBarType="line"
           />
         </resume-block>
       </div>
@@ -86,7 +87,7 @@ import Timeline from '../components/work/Timeline.vue';
 import PosterWall from '../components/work/PosterWall.vue';
 
 export default {
-  name: 'work',
+  name: 'Work',
   components: {
     ResumeBlock,
     InfoBlock,
@@ -121,9 +122,11 @@ export default {
         JavaScript: 70,
         HTML: 80,
         'CSS/SCSS': 80,
+        'C#': 50,
+      },
+      Frameworks: {
         VueJs: 60,
         Magento2: 70,
-        'C#': 50,
       },
       workExperience: [
         {

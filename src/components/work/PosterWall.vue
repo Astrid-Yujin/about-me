@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import poster from './Poster.vue';
+import Poster from './Poster.vue';
 
 export default {
-  name: 'poster-wall',
+  name: 'PosterWall',
   components: {
-    poster,
+    Poster,
   },
   props: {
     title: String,
