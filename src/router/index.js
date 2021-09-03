@@ -30,11 +30,13 @@ const routes = [
         path: '',
         name: 'ImageGallery',
         component: ImageGallery,
+        meta: { bodyClass: 'page-life page-image-gallery' },
       },
       {
         path: 'comments',
         name: 'Comments',
         component: CommentBlock,
+        meta: { bodyClass: 'page-life page-comment-block' },
       },
     ],
   },

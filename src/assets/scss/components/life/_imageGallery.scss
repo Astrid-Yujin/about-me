@@ -1,0 +1,39 @@
+.image-gallery {
+  .row {
+    margin: 5rem auto;
+    text-align: center;
+  }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .swiper-image {
+    width: 100%;
+  }
+
+  .swiper-text {
+    margin: 2rem 1rem;
+  }
+  
+  .swiper-pagination {
+    bottom: 0;
+  }
+}
+
+#modal-video {
+  .modal-dialog {
+    max-width: 80vw;
+    height: 80vh;
+  
+    .modal-content {
+      height: 100%;
+    }
+  
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

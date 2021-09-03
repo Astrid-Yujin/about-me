@@ -1,11 +1,7 @@
 <template>
   <div class="life page-content">
     <nature class="page-background"/>
-    <div class="row">
-      <div class="row-content">
-        <router-view></router-view>
-      </div>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
