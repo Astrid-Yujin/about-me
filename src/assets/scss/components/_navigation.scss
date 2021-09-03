@@ -37,17 +37,39 @@
     color: $c-white;
     font-weight: bold;
     cursor: pointer;
-    padding: 1rem;
     border-radius: 0.5rem;
     border: 2px solid transparent;
 
-    &:hover,
-    &.is-active {
+    &:not(.b-nav-dropdown) {
+      padding: 1rem;
+    }
+
+    &:not(.secondary):hover,
+    &:not(.secondary).is-active {
       border-color: $c-white;
+    }
+
+    &.secondary:hover,
+    &.secondary.is-active {
+      text-decoration: underline;
     }
 
     & + .nav-item {
       margin-left: 1rem;
     }
+
+    &.secondary {
+      margin-left: 0;
+    }
+  }
+
+  // overwrite default from Bootstrap
+  .nav-link {
+    padding: 1rem;
+  }
+
+  .dropdown-menu {
+    background-color: rgba($color: $c-black, $alpha: 0.6);
+    border: 1px solid white;
   }
 }

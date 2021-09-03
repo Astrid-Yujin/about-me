@@ -10,19 +10,46 @@
             <router-link
               v-for="(item, index) in navItems"
               :key=index
-              :to='{name: item}'
+              :to='{name: item.destination}'
               custom
               v-slot="{ href, navigate, isActive, isExactActive }"
             >
               <li
+                v-if="!item.children"
                 class="nav-item"
-                :class="[isExactActive && 'is-active']"
+                :class="{
+                  'is-active': isExactActive,
+                }"
                 :active="isActive"
                 :href="href"
                 @click="navigate"
               >
-                {{ item }}
+                {{ item.label }}
               </li>
+              <b-nav-item-dropdown
+                v-else
+                :text="item.label"
+              >
+              <router-link
+                v-for="(subItem, subIndex) in item.children"
+                :key=subIndex
+                :to='{name: subItem.destination}'
+                custom
+                v-slot="{ href, navigate, isActive, isExactActive }"
+              >
+                <li
+                  class="nav-item secondary"
+                  :class="{
+                    'is-active': isExactActive,
+                  }"
+                  :active="isActive"
+                  :href="href"
+                  @click="navigate"
+                >
+                  {{ subItem.label }}
+                </li>
+              </router-link>
+              </b-nav-item-dropdown>
             </router-link>
           </ul>
         </div>
@@ -35,7 +62,26 @@ export default {
   name: 'Navigation',
   data() {
     return {
-      navItems: ['Home', 'Work', 'Life'],
+      navItems: [{
+        label: 'Home',
+        destination: 'Home',
+      },
+      {
+        label: 'Work',
+        destination: 'Work',
+      },
+      {
+        label: 'Life',
+        destination: 'Life',
+        children: [{
+          label: 'Image Gallery',
+          destination: 'ImageGallery',
+        },
+        {
+          label: 'Message Board',
+          destination: 'Comments',
+        }],
+      }],
       isVisible: true,
     };
   },
