@@ -1,33 +1,61 @@
 <template>
   <section class="message-board">
-    <div class="message-board__title">
-      Say something to me!
-    </div>
-    <div class="message-board__content">
-      <div class="row">
-        <div class="row-content">
-          <div class="message-form">Coming soon!</div>
-        </div>
+    <div class="row">
+      <div class="row-content">
+        <b-table
+          :items="messages"
+          :fields="fields"
+          striped
+          hover
+        />
       </div>
-
-      <div class="row">
-        <div class="row-content">
-          <div
-            v-for="(value, name, key) in infos"
-            :key=key
-            class="message-board__item"
-          >
-            <div class="message-board__author">{{ author }}</div>
-            <div class="message-board__message" v-html="message"></div>
-          </div>
-        </div>
+    </div>
+    <div class="row">
+      <div class="row-content">
+        <comment-block />
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import axios from 'axios';
+import CommentBlock from './CommentBlock.vue';
+
 export default {
   name: 'MessageBoard',
+  components: {
+    CommentBlock,
+  },
+  data() {
+    return {
+      fields: [
+        {
+          key: 'author',
+          sortable: true,
+        },
+        {
+          key: 'time',
+          sortable: true,
+        },
+        {
+          key: 'content',
+          label: 'Message',
+          sortable: false,
+        },
+      ],
+      messages: [],
+    };
+  },
+  created() {
+    axios.defaults.baseURL = 'https://about-me-de1da-default-rtdb.europe-west1.firebasedatabase.app';
+
+    axios.get('/messages.json')
+      .then((res) => {
+        const { data } = res;
+        this.messages = Object.values(data);
+      })
+      .catch((error) => console.log(error));
+  },
 };
 </script>

@@ -2,7 +2,7 @@
   <div id="app">
     <navigation></navigation>
     <main class="main-content">
-      <transition name="change-page">
+      <transition name="default">
         <router-view></router-view>
       </transition>
     </main>

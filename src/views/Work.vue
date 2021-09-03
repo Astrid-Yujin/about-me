@@ -105,17 +105,6 @@ export default {
     Timeline,
     PosterWall,
   },
-  props: {
-    headline: {
-      type: String,
-      default: 'Yujin Wang',
-    },
-    subHeadline: {
-      type: String,
-      default: 'A happy frontend developer :)',
-    },
-  },
-  // Backend TODO: replace dummy data
   data() {
     return {
       personalInfo: [],

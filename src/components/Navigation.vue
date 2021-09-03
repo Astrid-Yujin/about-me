@@ -79,7 +79,7 @@ export default {
         },
         {
           label: 'Message Board',
-          destination: 'Comments',
+          destination: 'Messages',
         }],
       }],
       isVisible: true,

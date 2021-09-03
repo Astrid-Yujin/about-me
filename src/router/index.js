@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Work from '../views/Work.vue';
-import CommentBlock from '../components/life/CommentBlock.vue';
+import MessageBoard from '../components/life/MessageBoard.vue';
 import ImageGallery from '../components/life/ImageGallery.vue';
 
 Vue.use(VueRouter);
@@ -27,16 +27,16 @@ const routes = [
     meta: { bodyClass: 'page-life' },
     children: [
       {
-        path: '',
+        path: 'image-gallery',
         name: 'ImageGallery',
         component: ImageGallery,
         meta: { bodyClass: 'page-life page-image-gallery' },
       },
       {
-        path: 'comments',
-        name: 'Comments',
-        component: CommentBlock,
-        meta: { bodyClass: 'page-life page-comment-block' },
+        path: 'messages',
+        name: 'Messages',
+        component: MessageBoard,
+        meta: { bodyClass: 'page-life page-messages' },
       },
     ],
   },
