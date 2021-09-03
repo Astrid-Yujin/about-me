@@ -38,11 +38,12 @@
             title="Professional Skills"
             :infos="professionalSkills"
             progressBarType="line"
+            ref="progressLineContainer"
           />
           <info-block
             class="frameworks"
             title="Frameworks"
-            :infos="Frameworks"
+            :infos="frameworks"
             progressBarType="chart"
           />
         </resume-block>
@@ -90,6 +91,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import ResumeBlock from '../components/work/ResumeBlock.vue';
 import InfoBlock from '../components/work/InfoBlock.vue';
 import Timeline from '../components/work/Timeline.vue';
@@ -116,130 +118,30 @@ export default {
   // Backend TODO: replace dummy data
   data() {
     return {
-      personalInfo: [{
-        label: 'name',
-        value: 'Yujin Wang',
-      },
-      {
-        label: 'job',
-        value: 'Frontend Developer',
-      },
-      {
-        label: 'address',
-        value: 'Gottliebstraße 10, 70186,<br/> Stuttgart Germany',
-      },
-      {
-        label: 'email',
-        value: 'astrid.wangyujin@gmail.com',
-      }],
-      languageSkills: [{
-        label: 'English',
-        value: 'Fluent',
-      },
-      {
-        label: 'Germany',
-        value: 'Basic',
-      },
-      {
-        label: 'Chiniese',
-        value: 'Native',
-      }],
-      professionalSkills: [{
-        label: 'JavaScript',
-        value: 70,
-      },
-      {
-        label: 'HTML',
-        value: 80,
-      },
-      {
-        label: 'CSS/SCSS',
-        value: 80,
-      },
-      {
-        label: 'C#',
-        value: 50,
-      }],
-      Frameworks: [{
-        label: 'VueJs',
-        value: 60,
-      },
-      {
-        label: 'Magento2',
-        value: 70,
-      }],
-      workExperience: [
-        {
-          period: '08.2019 - now',
-          title: 'Frontend developer',
-          institution: {
-            name: 'Y1 Digital AG, Stuttgart',
-            url: 'https://www.y1.de/',
-          },
-        },
-        {
-          period: '08.2017 - 10.2018',
-          title: 'Work Student',
-          institution: {
-            name: 'Robert Bosch GmbH, Lenberg',
-            url: 'https://www.bosch.com/',
-          },
-        },
-      ],
-      education: [
-        {
-          period: '10.2015 - 11.2018',
-          title: 'Master of Science',
-          institution: {
-            name: 'Universtät Stuttgart, Germany',
-            url: 'https://www.uni-stuttgart.de/de/',
-          },
-        },
-        {
-          period: '09.2011 - 06.2015',
-          title: 'Bachelor of Science',
-          institution: {
-            name: 'Dalian University of Technology, China',
-            url: 'https://en.dlut.edu.cn/',
-          },
-        },
-        {
-          period: '02.2013 - 07.2013',
-          title: 'Exchange study',
-          institution: {
-            name: 'National Yunlin University of Science and Technology, Taiwan',
-            url: 'https://www.cm.yuntech.edu.tw/English/index.php',
-          },
-        },
-      ],
-      projects: [
-        {
-          year: '2021',
-          title: 'Fanatec',
-          link: 'https://fanatec.com/eu-de',
-        },
-        {
-          year: '2021',
-          title: 'Rieker',
-          link: 'https://www.rieker.com/shop/',
-        },
-        {
-          year: '2020',
-          title: 'Labaxetta',
-          link: 'https://www.labaxetta.com/',
-        },
-        {
-          year: '2020',
-          title: 'Maryan Beachwear',
-          link: 'https://www.maryanmehlhorn.com/',
-        },
-        {
-          year: '2020',
-          title: 'Ahlers',
-          link: 'https://www.baldessarini.com/de/',
-        },
-      ],
+      personalInfo: [],
+      languageSkills: [],
+      professionalSkills: [],
+      frameworks: [],
+      workExperience: [],
+      education: [],
+      projects: [],
     };
+  },
+  created() {
+    axios.defaults.baseURL = 'https://about-me-de1da-default-rtdb.europe-west1.firebasedatabase.app';
+
+    axios.get('/workPage.json')
+      .then((res) => {
+        const { data } = res;
+        this.personalInfo = data.personalInfo;
+        this.languageSkills = data.languageSkills;
+        this.professionalSkills = data.professionalSkills;
+        this.frameworks = data.frameworkSkills;
+        this.workExperience = data.workExperience;
+        this.education = data.education;
+        this.projects = data.projects;
+      })
+      .catch((error) => console.log(error));
   },
   beforeRouteEnter(to, from, next) {
     next(() => {

@@ -11,6 +11,7 @@
     "deploy": "sh deploy.sh"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.16.1",

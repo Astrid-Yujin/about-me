@@ -56,22 +56,26 @@ export default {
       timer: null,
     };
   },
-  mounted() {
-    const progressLines = this.$refs.progressLine;
-    // const vm = this;
-
-    /* eslint-disable no-param-reassign */
-    if (progressLines) {
+  watch: {
+    infos() {
+      if (this.progressBarType === 'line') {
+        this.animateProgressLine();
+      }
+    },
+  },
+  methods: {
+    animateProgressLine() {
+      /* eslint-disable no-param-reassign */
       this.infos.forEach((info) => {
         info.originalValue = info.value;
         info.value = 0;
 
         this.timer = setTimeout(() => {
           info.value = info.originalValue;
-        }, 500);
+        }, 1000);
       });
-    }
-    /* eslint-enable no-param-reassign */
+      /* eslint-enable no-param-reassign */
+    },
   },
   beforeDestroy() {
     this.timer = null;
