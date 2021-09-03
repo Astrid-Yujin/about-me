@@ -24,17 +24,26 @@
           title="About Me"
         >
           <info-block
-            title="personal information"
+            class="personal-information is-half"
+            title="Personal Information"
             :infos="personalInfo"
           />
           <info-block
-            title="languages"
+            class="languages is-half"
+            title="Languages"
             :infos="languageSkills"
           />
           <info-block
-            title="professional Skills"
+            class="profession-skills"
+            title="Professional Skills"
             :infos="professionalSkills"
             progressBarType="line"
+          />
+          <info-block
+            class="frameworks"
+            title="Frameworks"
+            :infos="Frameworks"
+            progressBarType="chart"
           />
         </resume-block>
       </div>
@@ -107,27 +116,58 @@ export default {
   // Backend TODO: replace dummy data
   data() {
     return {
-      personalInfo: {
-        name: 'Yujin Wang',
-        job: 'Frontend Developer',
-        address: 'Gottliebstraße 10, 70186,<br/> Stuttgart Germany',
-        email: 'astrid.wangyujin@gmail.com',
+      personalInfo: [{
+        label: 'name',
+        value: 'Yujin Wang',
       },
-      languageSkills: {
-        English: 'Fluent',
-        Germany: 'Basic',
-        Chiniese: 'Native',
+      {
+        label: 'job',
+        value: 'Frontend Developer',
       },
-      professionalSkills: {
-        JavaScript: 70,
-        HTML: 80,
-        'CSS/SCSS': 80,
-        'C#': 50,
+      {
+        label: 'address',
+        value: 'Gottliebstraße 10, 70186,<br/> Stuttgart Germany',
       },
-      Frameworks: {
-        VueJs: 60,
-        Magento2: 70,
+      {
+        label: 'email',
+        value: 'astrid.wangyujin@gmail.com',
+      }],
+      languageSkills: [{
+        label: 'English',
+        value: 'Fluent',
       },
+      {
+        label: 'Germany',
+        value: 'Basic',
+      },
+      {
+        label: 'Chiniese',
+        value: 'Native',
+      }],
+      professionalSkills: [{
+        label: 'JavaScript',
+        value: 70,
+      },
+      {
+        label: 'HTML',
+        value: 80,
+      },
+      {
+        label: 'CSS/SCSS',
+        value: 80,
+      },
+      {
+        label: 'C#',
+        value: 50,
+      }],
+      Frameworks: [{
+        label: 'VueJs',
+        value: 60,
+      },
+      {
+        label: 'Magento2',
+        value: 70,
+      }],
       workExperience: [
         {
           period: '08.2019 - now',
