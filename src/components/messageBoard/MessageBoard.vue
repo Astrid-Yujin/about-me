@@ -21,6 +21,7 @@
 
 <script>
 import axios from 'axios';
+import { BTable } from 'bootstrap-vue';
 import store from '../../store/index';
 import CommentBlock from '../commentBlock/CommentBlock.vue';
 
@@ -28,6 +29,7 @@ export default {
   name: 'MessageBoard',
   components: {
     CommentBlock,
+    BTable,
   },
   data() {
     return {

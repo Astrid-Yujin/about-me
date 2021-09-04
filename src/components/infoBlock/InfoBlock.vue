@@ -44,8 +44,13 @@
 </template>
 
 <script>
+import { BProgress } from 'bootstrap-vue';
+
 export default {
   name: 'InfoBlock',
+  components: {
+    BProgress,
+  },
   props: {
     title: String,
     infos: Array,

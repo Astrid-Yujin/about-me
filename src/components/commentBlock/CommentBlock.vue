@@ -92,11 +92,18 @@
 </template>
 
 <script>
+import { BModal, VBModal } from 'bootstrap-vue';
 import axios from 'axios';
 import store from '../../store/index';
 
 export default {
   name: 'CommentBlock',
+  components: {
+    BModal,
+  },
+  directives: {
+    'b-modal': VBModal,
+  },
   data() {
     return {
       errors: [],

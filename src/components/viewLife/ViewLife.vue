@@ -1,5 +1,5 @@
 <template>
-  <div class="life page-content">
+  <div class="view-life page-content">
     <background-nature class="page-background"/>
     <router-view></router-view>
   </div>
@@ -9,7 +9,7 @@
 import BackgroundNature from '../backgroundNature/BackgroundNature.vue';
 
 export default {
-  name: 'Life',
+  name: 'ViewLife',
   components: {
     BackgroundNature,
   },

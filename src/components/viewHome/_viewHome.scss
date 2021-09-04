@@ -1,9 +1,9 @@
-.home {
+.view-home {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - #{$d-nav-height});
   background-color: rgba($color: $c-black, $alpha: 0.9);
   overflow: hidden;
   display: flex;

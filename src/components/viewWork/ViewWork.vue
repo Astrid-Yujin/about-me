@@ -1,5 +1,5 @@
 <template>
-  <div class="work page-content">
+  <div class="view-work page-content">
     <div id="background-wrapper">
       <div class="cloud-container cloud1">
         <div class="cloud"></div>
@@ -99,7 +99,7 @@ import Timeline from '../timeline/Timeline.vue';
 import PosterWall from '../posterWall/PosterWall.vue';
 
 export default {
-  name: 'Work',
+  name: 'ViewWork',
   components: {
     ResumeBlock,
     InfoBlock,

@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import { BModal, BButton, VBModal } from 'bootstrap-vue';
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 import 'swiper/swiper-bundle.min.css';
 
@@ -62,6 +63,11 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+    BModal,
+    BButton,
+  },
+  directives: {
+    'b-modal': VBModal,
   },
   data() {
     return {

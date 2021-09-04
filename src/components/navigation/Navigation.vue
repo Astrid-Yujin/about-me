@@ -58,8 +58,13 @@
 </template>
 
 <script>
+import { BNavItemDropdown } from 'bootstrap-vue';
+
 export default {
   name: 'Navigation',
+  components: {
+    BNavItemDropdown,
+  },
   data() {
     return {
       navItems: [{

@@ -9,7 +9,7 @@
 import ViewHome from '../viewHome/ViewHome.vue';
 
 export default {
-  name: 'NotFound',
+  name: 'ViewNotFound',
   components: {
     ViewHome,
   },

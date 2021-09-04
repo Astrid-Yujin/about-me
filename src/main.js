@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
+import { BIcon, BIconLaptop, BIconPen } from 'bootstrap-vue';
 import Cloudinary, { CldImage } from 'cloudinary-vue';
 import VueEllipseProgress from 'vue-ellipse-progress';
 import App from './App.vue';
@@ -10,8 +10,10 @@ import store from './store';
 import 'normalize.css';
 import './App.scss';
 
-Vue.use(BootstrapVue);
-Vue.use(BootstrapVueIcons);
+Vue.component('BIcon', BIcon);
+Vue.component('BIconLaptop', BIconLaptop);
+Vue.component('BIconPen', BIconPen);
+
 Vue.use(VueEllipseProgress);
 Vue.use(Cloudinary, {
   configuration: {

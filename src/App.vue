@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { BOverlay } from 'bootstrap-vue';
 import store from './store/index';
 import Navigation from './components/navigation/Navigation.vue';
 import AppFooter from './components/footer/Footer.vue';
@@ -22,6 +23,7 @@ export default {
   components: {
     Navigation,
     AppFooter,
+    BOverlay,
   },
   computed: {
     isPageLoading() {

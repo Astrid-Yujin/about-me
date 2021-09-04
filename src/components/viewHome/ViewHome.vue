@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="view-home">
       <div class="row">
         <div class="row-content col-6">
           <h1>{{ headline }}</h1>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Home',
+  name: 'ViewHome',
   props: {
     headline: {
       type: String,
