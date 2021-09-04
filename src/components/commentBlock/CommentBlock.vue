@@ -118,6 +118,7 @@ export default {
             this.showModal();
             this.$refs.resetBtn.click();
           })
+          // eslint-disable-next-line
           .catch((error) => console.log(error));
       }
     },
