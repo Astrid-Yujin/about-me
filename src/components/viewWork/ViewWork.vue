@@ -92,10 +92,10 @@
 
 <script>
 import axios from 'axios';
-import ResumeBlock from '../components/work/ResumeBlock.vue';
-import InfoBlock from '../components/work/InfoBlock.vue';
-import Timeline from '../components/work/Timeline.vue';
-import PosterWall from '../components/work/PosterWall.vue';
+import ResumeBlock from '../resumeBlock/ResumeBlock.vue';
+import InfoBlock from '../infoBlock/InfoBlock.vue';
+import Timeline from '../timeline/Timeline.vue';
+import PosterWall from '../posterWall/PosterWall.vue';
 
 export default {
   name: 'Work',
@@ -130,6 +130,7 @@ export default {
         this.education = data.education;
         this.projects = data.projects;
       })
+      // eslint-disable-next-line
       .catch((error) => console.log(error));
   },
   beforeRouteEnter(to, from, next) {

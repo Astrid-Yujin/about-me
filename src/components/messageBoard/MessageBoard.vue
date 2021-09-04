@@ -20,7 +20,7 @@
 
 <script>
 import axios from 'axios';
-import CommentBlock from './CommentBlock.vue';
+import CommentBlock from '../commentBlock/CommentBlock.vue';
 
 export default {
   name: 'MessageBoard',

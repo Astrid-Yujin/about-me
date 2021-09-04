@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Poster from './Poster.vue';
+import Poster from '../poster/Poster.vue';
 
 export default {
   name: 'PosterWall',

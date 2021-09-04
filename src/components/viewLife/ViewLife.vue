@@ -1,17 +1,17 @@
 <template>
   <div class="life page-content">
-    <nature class="page-background"/>
+    <background-nature class="page-background"/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Nature from '../components/background/Nature.vue';
+import BackgroundNature from '../backgroundNature/BackgroundNature.vue';
 
 export default {
   name: 'Life',
   components: {
-    Nature,
+    BackgroundNature,
   },
   beforeRouteEnter(to, from, next) {
     next(() => {

@@ -1,0 +1,34 @@
+// third libs
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-vue/src/index.scss";
+
+// Variables
+@import "./scss/variables";
+
+// Fonts
+
+// Icons
+
+// Utilites
+@import "./scss/mixin";
+
+// Directives
+
+// Global
+@import "./scss/global";
+
+// Components
+@import "./components/backgroundNature/backgroundNature";
+@import "./components/commentBlock/commentBlock";
+@import "./components/footer/footer";
+@import "./components/imageGallery/imageGallery";
+@import "./components/infoBlock/infoBlock";
+@import "./components/navigation/navigation";
+@import "./components/poster/poster";
+@import "./components/posterWall/posterWall";
+@import "./components/resumeBlock/resumeBlock";
+@import "./components/timeline/timeline";
+@import "./components/timelineItem/timelineItem";
+@import "./components/viewHome/viewHome";
+@import "./components/viewLife/viewLife";
+@import "./components/viewWork/viewWork";

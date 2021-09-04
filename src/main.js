@@ -8,7 +8,7 @@ import router from './router';
 import store from './store';
 
 import 'normalize.css';
-import './assets/scss/App.scss';
+import './App.scss';
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);

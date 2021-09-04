@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue';
-import AppFooter from './components/Footer.vue';
+import Navigation from './components/navigation/Navigation.vue';
+import AppFooter from './components/footer/Footer.vue';
 
 export default {
   name: 'App',

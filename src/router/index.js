@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
-import Work from '../views/Work.vue';
-import MessageBoard from '../components/life/MessageBoard.vue';
-import ImageGallery from '../components/life/ImageGallery.vue';
+import ViewHome from '../components/viewHome/ViewHome.vue';
+import ViewWork from '../components/viewWork/ViewWork.vue';
+import MessageBoard from '../components/messageBoard/MessageBoard.vue';
+import ImageGallery from '../components/imageGallery/ImageGallery.vue';
 
 Vue.use(VueRouter);
 
@@ -11,19 +11,19 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: ViewHome,
     meta: { bodyClass: 'page-home' },
   },
   {
     path: '/work',
     name: 'Work',
-    component: Work,
+    component: ViewWork,
     meta: { bodyClass: 'page-work' },
   },
   {
     path: '/life',
     name: 'Life',
-    component: () => import(/* webpackChunkName: "life" */ '../views/Life.vue'),
+    component: () => import(/* webpackChunkName: "life" */ '../components/viewLife/ViewLife.vue'),
     meta: { bodyClass: 'page-life' },
     children: [
       {
@@ -43,7 +43,7 @@ const routes = [
   {
     path: '*',
     name: 'NotFound',
-    component: () => import(/* webpackChunkName: "notFound" */ '../views/NotFound.vue'),
+    component: () => import(/* webpackChunkName: "notFound" */ '../components/viewNotFound/ViewNotFound.vue'),
     meta: { bodyClass: 'page-404' },
   },
 ];

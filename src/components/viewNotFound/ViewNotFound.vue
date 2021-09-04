@@ -1,17 +1,17 @@
 <template>
-  <home
+  <view-home
     headline="Opps..."
     subHeadline="Page Not Found!"
   />
 </template>
 
 <script>
-import Home from './Home.vue';
+import ViewHome from '../viewHome/ViewHome.vue';
 
 export default {
   name: 'NotFound',
   components: {
-    Home,
+    ViewHome,
   },
   beforeRouteEnter(to, from, next) {
     // called before the route that renders this component is confirmed.
