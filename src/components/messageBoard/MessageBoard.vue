@@ -3,6 +3,7 @@
     <div class="row">
       <div class="row-content">
         <b-table
+          ref="messageTable"
           :items="messages"
           :fields="fields"
           striped
@@ -12,7 +13,7 @@
     </div>
     <div class="row">
       <div class="row-content">
-        <comment-block />
+        <comment-block @update="updateMessages"/>
       </div>
     </div>
   </section>
@@ -20,6 +21,7 @@
 
 <script>
 import axios from 'axios';
+import store from '../../store/index';
 import CommentBlock from '../commentBlock/CommentBlock.vue';
 
 export default {
@@ -29,6 +31,7 @@ export default {
   },
   data() {
     return {
+      isLoading: true,
       fields: [
         {
           key: 'author',
@@ -54,8 +57,21 @@ export default {
       .then((res) => {
         const { data } = res;
         this.messages = Object.values(data);
+        store.commit('finishPageLoading');
       })
-      .catch((error) => console.log(error));
+      // eslint-disable-next-line
+      .catch((error) => alert(error));
+  },
+  mounted() {
+    store.commit('startPageLoading');
+  },
+  beforeDestroy() {
+    store.commit('finishPageLoading');
+  },
+  methods: {
+    updateMessages(newMessage) {
+      this.messages.push(newMessage);
+    },
   },
 };
 </script>

@@ -34,12 +34,15 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## TODOs:
-* Life page
+* ~~Life page~~
   * ~~Message board~~ (form validation, firebase, ref: https://webmobtuts.com/frontend-development/vuejs-tutorials/building-a-simple-forum-with-vue-js-vuex-and-firebase-part1-authentication/)
   * ~~Image gallery (lazyload)~~
-  * ~~Backgroud~~ -> unify background css
+  * ~~Backgroud~~
 * ~~Icons~~ & Font
 * ~~Boostrap~~
-* Page overlay when loading
+* ~~Page overlay when loading~~
+* Add two background mode (switcher toggle https://vuejsexamples.com/a-customizable-rocker-switch-component-for-vue-js/) -> Unify background css
+* Vuex globally import ?
+* generate video from images in image gallery with FFmpeg
 * PWA
 * Testing

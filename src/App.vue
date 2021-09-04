@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <navigation></navigation>
-    <main class="main-content">
-      <transition name="default">
-        <router-view></router-view>
-      </transition>
-    </main>
+    <b-overlay :show="isPageLoading" rounded="sm">
+      <main class="main-content">
+        <transition name="default">
+          <router-view></router-view>
+        </transition>
+      </main>
+    </b-overlay>
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import store from './store/index';
 import Navigation from './components/navigation/Navigation.vue';
 import AppFooter from './components/footer/Footer.vue';
 
@@ -19,6 +22,11 @@ export default {
   components: {
     Navigation,
     AppFooter,
+  },
+  computed: {
+    isPageLoading() {
+      return store.state.isPageLoading;
+    },
   },
   metaInfo: {
     meta: [

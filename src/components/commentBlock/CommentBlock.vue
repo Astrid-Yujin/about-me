@@ -93,6 +93,7 @@
 
 <script>
 import axios from 'axios';
+import store from '../../store/index';
 
 export default {
   name: 'CommentBlock',
@@ -110,16 +111,20 @@ export default {
   methods: {
     addComment() {
       if (this.formValidation()) {
-        this.model.time = new Date().toLocaleString();
-        axios.defaults.baseURL = 'https://about-me-de1da-default-rtdb.europe-west1.firebasedatabase.app';
+        store.commit('startPageLoading');
 
+        this.model.time = new Date().toLocaleString();
+
+        axios.defaults.baseURL = 'https://about-me-de1da-default-rtdb.europe-west1.firebasedatabase.app';
         axios.post('/messages.json', this.model)
           .then(() => {
             this.showModal();
+            this.$emit('update', this.model);
             this.$refs.resetBtn.click();
+            store.commit('finishPageLoading');
           })
           // eslint-disable-next-line
-          .catch((error) => console.log(error));
+          .catch((error) => alert(error));
       }
     },
     formValidation() {

@@ -92,6 +92,7 @@
 
 <script>
 import axios from 'axios';
+import store from '../../store/index';
 import ResumeBlock from '../resumeBlock/ResumeBlock.vue';
 import InfoBlock from '../infoBlock/InfoBlock.vue';
 import Timeline from '../timeline/Timeline.vue';
@@ -129,14 +130,21 @@ export default {
         this.workExperience = data.workExperience;
         this.education = data.education;
         this.projects = data.projects;
+        store.commit('finishPageLoading');
       })
       // eslint-disable-next-line
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error));
+  },
+  mounted() {
+    store.commit('startPageLoading');
   },
   beforeRouteEnter(to, from, next) {
     next(() => {
       document.body.className = to.meta.bodyClass;
     });
+  },
+  beforeDestroy() {
+    store.commit('finishPageLoading');
   },
 };
 </script>
