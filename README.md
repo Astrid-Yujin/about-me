@@ -41,7 +41,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * ~~Icons~~ & Font
 * ~~Boostrap~~
 * ~~Page overlay when loading~~
-* Import only used bootstrap components
+* ~~Import only used bootstrap components~~
 * Add two background mode (switcher toggle https://vuejsexamples.com/a-customizable-rocker-switch-component-for-vue-js/) -> Unify background css
 * Vuex globally import ?
 * generate video from images in image gallery with FFmpeg
