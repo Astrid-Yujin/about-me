@@ -1,0 +1,40 @@
+@keyframes animateCloud {
+  from {
+    margin-left: -1000px;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes fadeInFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.default-enter-active {
+  transition: all 0.8s ease;
+}
+
+.default-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.default-enter,
+.default-leave-to {
+  transform: translateY(0.5rem);
+  opacity: 0;
+}

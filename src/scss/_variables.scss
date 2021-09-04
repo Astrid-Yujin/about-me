@@ -1,54 +1,11 @@
 // Breakpoints
-$b-mobile: 480px;
-$b-tablet: 768px; // start desktop view
-$b-desktop: 1280px;
+@import "./variables/breakpoints";
 
-// Color:
-$c-white: #ffffff;
-$c-black: #000000;
-$c-yellow: #ebc815;
-$c-light-blue: rgba(
-  $color: lightblue,
-  $alpha: 0.9,
-);
-$c-overlay-dim: rgba(
-  $color: $c-black,
-  $alpha: 0.1,
-);
-
-$c-primary: $c-yellow;
-$c-progress-inner: blue;
-$c-progress-outer: #8ec5fc;
+// Colors
+@import "./variables/colors";
 
 // Dimensions
-$d-content-width-max: 1200px;
-$d-page-padding-vertical: 5rem;
-$d-nav-height: 70px;
-$d-footer-padding: 1rem;
-$d-footer-height: 2 * $d-footer-padding + 1rem * 1.5;
+@import "./variables/dimensions";
 
 // Fonts
-$f-size-h1-desktop: 2.5rem; // 40px
-$f-size-h2-desktop: 2rem; // 32px
-$f-size-h3-desktop: 1.75rem; // 28px
-$f-size-h4-desktop: 1.5rem; // 24px
-$f-size-h5-desktop: 1.25rem; // 20px
-$f-size-h6-desktop: 1rem; // 16px
-$f-size-body-desktop: 1rem; // 16px
-$f-size-caption-desktop: 0.8125rem; // 13px
-
-$f-size-h1-mobile: 2rem; // 32px
-$f-size-h2-mobile: 1.75rem; // 28px
-$f-size-h3-mobile: 1.5rem; // 24px
-$f-size-h4-mobile: 1.25rem; // 20px
-$f-size-h5-mobile: 1rem; // 16px
-$f-size-h6-mobile: 0.875rem; // 14px
-$f-size-body-mobile: 0.875rem; // 14px
-$f-size-caption-mobile: 0.6875rem; // 11px
-
-$f-ls-small: 0.005em; // 0.5%
-$f-ls-medium: 0.01em; // 1%
-$f-ls-large: 0.05em; // 5%
-
-// Override Bootstrap variables
-$primary: $c-yellow;
+@import "./variables/fonts";

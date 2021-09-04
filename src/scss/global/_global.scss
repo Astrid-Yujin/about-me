@@ -1,0 +1,71 @@
+// Reset
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+// Layout
+.page-content {
+  padding: $d-page-padding-vertical 0
+    calc(#{$d-page-padding-vertical} + #{$d-footer-height});
+  min-height: calc(100vh - #{$d-nav-height} - #{$d-footer-height});
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+
+  @include tablet {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-width: $d-content-width-max;
+  }
+
+  &.is-fullwidth {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+  }
+
+  & + & {
+    margin-top: 1.5rem;
+  }
+
+  .row-content {
+    width: 100%;
+  }
+}
+
+$columnCount: 12;
+.col {
+  @for $i from 1 to $columnCount {
+    &-#{$i} {
+      width: 100%;
+
+      @include tablet {
+        width: calc(100% / #{($columnCount / $i)});
+      }
+    }
+  }
+}
+
+.col-sm {
+  @for $i from 1 to $columnCount {
+    &-#{$i} {
+      width: calc(100% / #{($columnCount / $i)});
+    }
+  }
+}

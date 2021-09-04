@@ -1,0 +1,19 @@
+// Color:
+$c-white: #ffffff;
+$c-black: #000000;
+$c-yellow: #ebc815;
+$c-light-blue: rgba(
+  $color: lightblue,
+  $alpha: 0.9,
+);
+$c-overlay-dim: rgba(
+  $color: $c-black,
+  $alpha: 0.1,
+);
+
+$c-primary: $c-yellow;
+$c-progress-inner: blue;
+$c-progress-outer: #8ec5fc;
+
+// Override Bootstrap variables
+$primary: $c-yellow;
