@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["notFound"],{"1b51":function(e,n,o){"use strict";o.r(n);var t=function(){var e=this,n=e.$createElement,o=e._self._c||n;return o("view-home",{attrs:{headline:"Opps...",subHeadline:"Page Not Found!"}})},a=[],u=o("97c6"),s={name:"ViewNotFound",components:{ViewHome:u["a"]},beforeRouteEnter:function(e,n,o){o((function(){document.body.className=e.meta.bodyClass}))}},c=s,i=o("2877"),l=Object(i["a"])(c,t,a,!1,null,null,null);n["default"]=l.exports}}]);
+//# sourceMappingURL=notFound.76a0efb5.js.map
