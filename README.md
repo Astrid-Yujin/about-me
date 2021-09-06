@@ -47,3 +47,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * generate video from images in image gallery with FFmpeg
 * PWA
 * Testing
+
+### NPM package notes
+* Please do not update following packages to avoid incompatibilitiy (06.09.2021)
+* sass-loader   ^10.1.1 
+* bootstrap     ^4.5.3
+* swiper        ^6.8.2
