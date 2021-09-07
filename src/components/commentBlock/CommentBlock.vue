@@ -94,7 +94,6 @@
 <script>
 import { BModal, VBModal } from 'bootstrap-vue';
 import axios from 'axios';
-import store from '../../store/index';
 
 export default {
   name: 'CommentBlock',
@@ -118,7 +117,7 @@ export default {
   methods: {
     addComment() {
       if (this.formValidation()) {
-        store.commit('startPageLoading');
+        this.$store.commit('startPageLoading');
 
         this.model.time = new Date().toLocaleString();
 
@@ -128,7 +127,7 @@ export default {
             this.showModal();
             this.$emit('update', this.model);
             this.$refs.resetBtn.click();
-            store.commit('finishPageLoading');
+            this.$store.commit('finishPageLoading');
           })
           // eslint-disable-next-line
           .catch((error) => alert(error));

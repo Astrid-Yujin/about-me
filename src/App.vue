@@ -14,7 +14,6 @@
 
 <script>
 import { BOverlay } from 'bootstrap-vue';
-import store from './store/index';
 import Navigation from './components/navigation/Navigation.vue';
 import AppFooter from './components/footer/Footer.vue';
 
@@ -27,7 +26,7 @@ export default {
   },
   computed: {
     isPageLoading() {
-      return store.state.isPageLoading;
+      return this.$store.state.isPageLoading;
     },
   },
   metaInfo: {

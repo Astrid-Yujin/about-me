@@ -22,7 +22,6 @@
 <script>
 import axios from 'axios';
 import { BTable } from 'bootstrap-vue';
-import store from '../../store/index';
 import CommentBlock from '../commentBlock/CommentBlock.vue';
 
 export default {
@@ -59,16 +58,16 @@ export default {
       .then((res) => {
         const { data } = res;
         this.messages = Object.values(data);
-        store.commit('finishPageLoading');
+        this.$store.commit('finishPageLoading');
       })
       // eslint-disable-next-line
       .catch((error) => alert(error));
   },
   mounted() {
-    store.commit('startPageLoading');
+    this.$store.commit('startPageLoading');
   },
   beforeDestroy() {
-    store.commit('finishPageLoading');
+    this.$store.commit('finishPageLoading');
   },
   methods: {
     updateMessages(newMessage) {

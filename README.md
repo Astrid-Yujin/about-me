@@ -1,6 +1,14 @@
-# about-me
+## About-Me
 
-## Project setup
+TweetWorld 
+
+A single-page-application which serves as a resume website, built with Vue 2, JavaScript, and CSS/SASS.
+
+---
+
+## Installation and Setup Instructions
+
+### Project Installation
 ```
 npm install
 ```
@@ -33,22 +41,56 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## TODOs:
-* ~~Life page~~
+---
+
+## Features
+
+* SPA built with Vue2
+* Responsive design
+* PWA (init status) 
+<br><br>
+* Bootstrap / Bootstrap-Vue / Bootstrap-Icon
+* Cloudinary media library
+* Firebase 
+* Axios
+<br><br>
+* Animated background
+* Page loading ovelay
+* Progress animation
+* Image gallery
+* Message board
+<br><br>
+
+---
+
+## Project Status
+
+This project is currently in development. Users can visit the home, work and life pages. 
+
+Page structure and home page are almost done. 
+
+### TODOs:
+* Global
+  * ~~Icons~~ & Font
+  * ~~Boostrap~~
+  * ~~Page overlay when loading~~
+  * ~~Import only used bootstrap components~~
+  * ~~Vuex globally import~~
+  * Authentication (Firebase access)
+  * PWA
+  * Testing
+* Work page:
+  * Add project icons
+* Life page: 
   * ~~Message board~~ (form validation, firebase, ref: https://webmobtuts.com/frontend-development/vuejs-tutorials/building-a-simple-forum-with-vue-js-vuex-and-firebase-part1-authentication/)
   * ~~Image gallery (lazyload)~~
   * ~~Backgroud~~
-* ~~Icons~~ & Font
-* ~~Boostrap~~
-* ~~Page overlay when loading~~
-* ~~Import only used bootstrap components~~
-* Add two background mode (switcher toggle https://vuejsexamples.com/a-customizable-rocker-switch-component-for-vue-js/) -> Unify background css
-* Vuex globally import ?
-* generate video from images in image gallery with FFmpeg
-* PWA
-* Testing
+  * Add two background mode (switcher toggle https://vuejsexamples.com/a-customizable-rocker-switch-component-for-vue-js/) -> Unify background css
+  * generate video from images in image gallery with FFmpeg
 
-### NPM package notes
+---
+
+## NPM package update notes
 * Please do not update following packages to avoid incompatibilitiy (06.09.2021)
 * sass-loader   ^10.1.1 
 * bootstrap     ^4.5.3
